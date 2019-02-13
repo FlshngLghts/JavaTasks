@@ -14,7 +14,8 @@ public class Main {
         boolean bl1 = true, bl2 = false, bl3 = false, bl4 = true, bl5 = true; // логический тип - два значения - true или false
 
         //Пункт 1 - вывод значений переменных через запятую (без пробелов), без переноса на новую строку
-       /* System.out.print(b1 + "," + b2 + "," + b3 + "," + b4 + "," + b5 + ",");
+        //Вывод с помощью функции print
+        /* System.out.print(b1 + "," + b2 + "," + b3 + "," + b4 + "," + b5 + ",");
         System.out.print(s1 + "," + s2 + "," + s3 + "," + s4 + "," + s5 + ",");
         System.out.print(c1 + "," + c2 + "," + c3 + "," + c4 + "," + c5 + ",");
         System.out.print(bl1 + "," + bl2 + "," + bl3 + "," + bl4 + "," + bl5 + ",");
@@ -22,6 +23,11 @@ public class Main {
         System.out.print(d1 + "," + d2 + "," + d3 + "," + d4 + "," + d5 + ",");
         System.out.print(f1 + "," + f2 + "," + f3 + "," + f4 + "," + f5 + ",");
         System.out.print(i1 + "," + i2 + "," + i3 + "," + i4 + "," + i5); */
+
+        //Вывод с помощью printf
+        /*System.out.printf("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%c,%c,%c,%c,%c,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%b,%b,%b,%b,%b",
+                b1, b2, b3, b4, b5, s1, s2, s3, s4, s5, i1, i2, i3, i4, i5, l1, l2, l3, l4, l5, c1, c2, c3, c4, c5, f1, f2, f3, f4, f5,
+                d1, d2, d3, d4, d5, bl1, bl2, bl3, bl4, bl5);*/
 
         //Пункт 2 - вывод знаачений переменных через запятую с пробелами и переносом строки для каждого нового типа данных
         //Вывод с помощью функции println
@@ -35,20 +41,59 @@ public class Main {
         System.out.println("Int vars: " + i1 + ", " + i2 + ", " + i3 + ", " + i4 + ", " + i5);*/
 
         //Вывод с помощью функции print
-        System.out.print("Byte vars: " + b1 + ", " + b2 + ", " + b3 + ", " + b4 + ", " + b5 + '\n');
+        /*System.out.print("Byte vars: " + b1 + ", " + b2 + ", " + b3 + ", " + b4 + ", " + b5 + '\n');
         System.out.print("Short vars: " + s1 + ", " + s2 + ", " + s3 + ", " + s4 + ", " + s5 + '\n');
         System.out.print("Char vars: " + c1 + ", " + c2 + ", " + c3 + ", " + c4 + ", " + c5 + '\n');
         System.out.print("Boolean vars: " + bl1 + ", " + bl2 + ", " + bl3 + ", " + bl4 + ", " + bl5 + '\n');
         System.out.print("Long vars: " + l1 + ", " + l2 + ", " + l3 + ", " + l4 + ", " + l5 + '\n');
         System.out.print("Double vars: " + d1 + ", " + d2 + ", " + d3 + ", " + d4 + ", " + d5 + '\n');
         System.out.print("Float vars: " + f1 + ", " + f2 + ", " + f3 + ", " + f4 + ", " + f5 + '\n');
-        System.out.print("Int vars: " + i1 + ", " + i2 + ", " + i3 + ", " + i4 + ", " + i5);
+        System.out.print("Int vars: " + i1 + ", " + i2 + ", " + i3 + ", " + i4 + ", " + i5);*/
 
-        //Пункт 3 - Реализовать методы для сложения, вычитания, умножения, деления для каждого типа; ограничить вывод количества символов после запятой 3-мя
+        //Вывод с помощью printf
+        System.out.printf("Byte vars: %d, %d, %d, %d, %d\nShort vars: %d, %d, %d, %d, %d\nInt vars: %d, %d, %d, %d, %d\n" +
+                        "Long vars: %,d, %,d, %,d, %,d, %,d\nChar vars: %c, %c, %c, %c, %c\nFloat vars: %f, %f, %f, %f, %f" +
+                        "\nDouble vars: %f, %f, %f, %f, %.4f\nBoolean vars: %b, %b, %b, %b, %b",
+                b1, b2, b3, b4, b5, s1, s2, s3, s4, s5, i1, i2, i3, i4, i5, l1, l2, l3, l4, l5, c1, c2, c3, c4, c5, f1, f2, f3, f4, f5,
+                d1, d2, d3, d4, d5, bl1, bl2, bl3, bl4, bl5);
 
-
-
-
+        //Пункт 3 - вывод
+        /*System.out.printf("%d\n", sum(b1, b2));
+        System.out.print(sub(s2, s5) + '\n');
+        System.out.println(sum(i1, i3));
+        System.out.println("Long division: " + "L2/L4 = " + div(l2, l4));
+        System.out.printf("%.3f\n", sum(d5, d3));
+        System.out.printf("%.3f\n", div(f3, f4));
+        System.out.print(mul(c5, c4));*/
 
     }
+    //Пункт 3 - Реализовать методы для сложения, вычитания, умножения, деления для каждого типа; ограничить вывод количества символов после запятой 3-мя
+    static byte sum(byte x, byte y){
+        return (byte) (x + y);
+    }
+
+    static short sub(short x, short y){
+        return (short) (x - y);
+    }
+
+    static int sum(int x, int y, int z){
+        return x + y + z;
+    }
+
+    static long div(long x, long y){
+        return x / y;
+    }
+
+    static double sum(double x, double y){
+        return x + y;
+    }
+
+    static char mul(char x, double y){
+        return (char) (x * y);
+    }
+
+    static float div(float x, float y){
+        return x / y;
+    }
 }
+
